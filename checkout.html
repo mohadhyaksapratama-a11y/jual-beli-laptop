@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | XYZ Company</title>
+    <meta
+      name="description"
+      content="Selesaikan pesanan Anda di XYZ Company."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="checkout-page">
+    <div id="preloader"><div class="spinner"></div></div>
+
+    <header class="header">
+      <nav class="container navbar">
+        <a href="index.html" class="nav-logo">XYZ Company</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link-item active">Beranda</a></li>
+
+          <li class="nav-item-dropdown simple-dropdown">
+            <a href="index.html#products" class="nav-link-item"
+              >Produk <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html#products" data-category-filter="work"
+                  >Untuk Bekerja</a
+                >
+              </li>
+              <li>
+                <a href="index.html#products" data-category-filter="gaming"
+                  >Gaming</a
+                >
+              </li>
+              <li>
+                <a href="index.html#products" data-category-filter="creative"
+                  >Kreatif</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a href="index.html#products" data-category-filter="all"
+                  >Lihat Semua Produk</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html#blog" class="nav-link-item">Blog</a></li>
+          <li><a href="dukungan.html" class="nav-link-item">Dukungan</a></li>
+          <li><a href="index.html#contact" class="nav-link-item">Kontak</a></li>
+        </ul>
+        <div class="nav-controls">
+          <a
+            href="keranjang.html"
+            class="nav-cart-icon"
+            aria-label="Keranjang Belanja"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-item-count">0</span>
+          </a>
+          <div id="user-control-area">
+            <a href="login.html" class="nav-user-icon" aria-label="Akun Pengguna">
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+              </div>
+            </label>
+          </div>
+          <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container checkout-container">
+          <div class="checkout-form">
+            <h2>Informasi Pengiriman</h2>
+            <form id="checkout-form">
+              <div class="form-group">
+                <label for="checkout-name">Nama Lengkap</label>
+                <input type="text" id="checkout-name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-email">Email</label>
+                <input type="email" id="checkout-email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-phone">Nomor Telepon</label>
+                <input type="tel" id="checkout-phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-address">Alamat Lengkap</label>
+                <textarea
+                  id="checkout-address"
+                  rows="4"
+                  name="address"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="checkout-city">Kota</label>
+                <input type="text" id="checkout-city" name="city" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-postal">Kode Pos</label>
+                <input
+                  type="text"
+                  id="checkout-postal"
+                  name="postal_code"
+                  required
+                />
+              </div>
+
+              <h2>Metode Pembayaran</h2>
+              <div class="payment-methods">
+                <label class="payment-method">
+                  <input
+                    type="radio"
+                    name="payment_method"
+                    value="bca_va"
+                    checked
+                  />
+                  <img src="images/logo-bca.png" alt="BCA Virtual Account" />
+                  <span>BCA Virtual Account</span>
+                </label>
+                <label class="payment-method">
+                  <input type="radio" name="payment_method" value="other_va" />
+                  <img src="images/logo-other-bank.png" alt="Bank Lain" />
+                  <span>Bank Lain (Virtual Account)</span>
+                </label>
+                <label class="payment-method">
+                  <input type="radio" name="payment_method" value="qris" />
+                  <img src="images/logo-qris.png" alt="QRIS" />
+                  <span>QRIS</span>
+                </label>
+              </div>
+
+              <p id="checkout-status" class="auth-status"></p>
+            </form>
+          </div>
+
+          <div class="checkout-summary">
+            <h2>Ringkasan Pesanan</h2>
+            <div id="checkout-items-summary">
+              <p>Memuat ringkasan...</p>
+            </div>
+            <div
+              class="checkout-totals"
+              id="checkout-totals-summary"
+            ></div>
+            <button type_submit" form="checkout-form" class="btn checkout-btn">
+              Bayar Sekarang (Simulasi)
+            </button>
+            <p
+              style="
+                font-size: 0.8rem;
+                text-align: center;
+                margin-top: 1rem;
+                color: var(--text-color-muted);
+              "
+            >
+              Ini adalah simulasi. Tidak ada pembayaran nyata yang akan
+              diproses.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 class="nav-logo">XYZ Company</h4>
+            <p>Menciptakan masa depan teknologi.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Tautan Cepat</h4>
+            <ul>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="index.html#blog">Blog</a></li>
+              <li><a href="dukungan.html">Dukungan</a></li>
+              <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Syarat & Ketentuan</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Kebijakan Pengembalian</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          Hak Cipta © <span id="copyright-year"></span> XYZ Company.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

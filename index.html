@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XYZ Company | Laptop & Gadget Premium</title>
+    <meta
+      name="description"
+      content="Temukan laptop berperforma tinggi dan gadget inovatif terbaru dari XYZ Company. Jelajahi seri WorkPlus, PIXWAR, dan 360 Stylus kami."
+    />
+    <meta name="author" content="XYZ Company" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="home-page">
+    <div id="preloader"><div class="spinner"></div></div>
+
+    <header class="header">
+      <nav class="container navbar">
+        <a href="index.html" class="nav-logo">XYZ Company</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link-item active">Beranda</a></li>
+
+          <li class="nav-item-dropdown simple-dropdown">
+            <a href="index.html#products" class="nav-link-item"
+              >Produk <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html#products" data-category-filter="work"
+                  >Untuk Bekerja</a
+                >
+              </li>
+              <li>
+                <a href="index.html#products" data-category-filter="gaming"
+                  >Gaming</a
+                >
+              </li>
+              <li>
+                <a href="index.html#products" data-category-filter="creative"
+                  >Kreatif</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a href="index.html#products" data-category-filter="all"
+                  >Lihat Semua Produk</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html#blog" class="nav-link-item">Blog</a></li>
+          <li><a href="dukungan.html" class="nav-link-item">Dukungan</a></li>
+          <li><a href="index.html#contact" class="nav-link-item">Kontak</a></li>
+        </ul>
+        <div class="nav-controls">
+          <a
+            href="keranjang.html"
+            class="nav-cart-icon"
+            aria-label="Keranjang Belanja"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-item-count">0</span>
+          </a>
+          <div id="user-control-area">
+            <a
+              href="login.html"
+              class="nav-user-icon"
+              aria-label="Akun Pengguna"
+            >
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round">
+                <i class="fas fa-sun sun-icon"></i
+                ><i class="fas fa-moon moon-icon"></i>
+              </div>
+            </label>
+          </div>
+          <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              style="background-image: url('images/hero-bg.jpg')"
+            >
+              <div class="hero-content">
+                <span class="hero-subtitle">XYZ COMPANY</span>
+                <h1>Inovasi dalam Setiap Piksel.</h1>
+                <p>
+                  Rasakan performa generasi terbaru dengan laptop premium XYZ
+                  Company, dirancang untuk Anda.
+                </p>
+                <a href="#products" class="btn">Jelajahi Produk</a>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('images/produk-pixwar-gfx-pro.jpg')"
+            >
+              <div class="hero-content">
+                <span class="hero-subtitle">PIXWAR GFX PRO</span>
+                <h1>Mesin Gaming Tanpa Kompromi</h1>
+                <p>
+                  Ditenagai AMD Ryzen™ 9 dan NVIDIA® GeForce RTX™ 4070 untuk
+                  performa AAA terbaik.
+                </p>
+                <a href="produk.html?id=2" class="btn">Lihat Detail</a>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('images/produk-workplus-x1.jpg')"
+            >
+              <div class="hero-content">
+                <span class="hero-subtitle">WORKPLUS X1</span>
+                <h1>Elegan & Bertenaga</h1>
+                <p>
+                  Ultrabook premium dengan layar OLED 2.8K 90Hz dan sasis
+                  magnesium-alloy yang ringan.
+                </p>
+                <a href="produk.html?id=1" class="btn">Pelajari Lebih Lanjut</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section id="why-us" class="section">
+        <div class="container">
+          <h2 class="section-title">Mengapa Memilih XYZ Company?</h2>
+          <div class="why-us-grid">
+            <div class="feature-box">
+              <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+              <h3>Performa Terjamin</h3>
+              <p>
+                Kami hanya menggunakan komponen terbaik untuk memastikan
+                performa maksimal.
+              </p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Garansi Resmi 2 Tahun</h3>
+              <p>
+                Nikmati ketenangan dengan layanan garansi penuh selama 2 tahun.
+              </p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon"><i class="fas fa-headset"></i></div>
+              <h3>Dukungan Pelanggan 24/7</h3>
+              <p>
+                Tim ahli kami siap membantu Anda kapan saja memastikan
+                pengalaman terbaik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section bg-light">
+        <div class="container">
+          <h2 class="section-title">Produk Kami</h2>
+          <div class="product-controls">
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-category="all">
+                Semua
+              </button>
+              <button class="filter-btn" data-category="work">
+                Untuk Bekerja
+              </button>
+              <button class="filter-btn" data-category="gaming">Gaming</button>
+              <button class="filter-btn" data-category="creative">
+                Kreatif
+              </button>
+            </div>
+            <div class="search-bar">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Cari produk (mis. PIXWAR)"
+              />
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+          <div class="product-grid" id="product-grid-container">
+            <div class="loading-placeholder">
+              <div class="spinner"></div>
+              <p>Memuat produk...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="section">
+        <div class="container">
+          <h2 class="section-title">Berita & Artikel Terbaru</h2>
+          <div class="blog-grid" id="blog-grid-container"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section bg-light">
+        <div class="container">
+          <h2 class="section-title">Tentang XYZ Company</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <h3>Misi Kami: Memberdayakan Ambisi Anda</h3>
+              <p>
+                Didirikan pada tahun 2020, XYZ Company lahir dari semangat untuk
+                teknologi yang memberdayakan.
+              </p>
+              <p>
+                Setiap produk XYZ Company dibuat dengan presisi, performa, dan
+                pengguna sebagai inti dari segalanya.
+              </p>
+              <a href="#contact" class="btn">Hubungi Kami</a>
+            </div>
+            <div class="about-image">
+              <img src="images/tentang-kami.jpg" alt="Tim XYZ Company" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2 class="section-title">Hubungi Kami</h2>
+          <div class="contact-grid">
+            <div class="contact-form">
+              <h3>Kirimkan Pesan Anda</h3>
+              <form id="contact-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Nama Anda"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email Anda"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Pesan Anda"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+                <p id="form-status"></p>
+              </form>
+            </div>
+            <div class="contact-info">
+              <h3>Informasi Kontak</h3>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Jl. Teknologi No. 123,
+                Jakarta Selatan
+              </p>
+              <p><i class="fas fa-phone"></i> +62 21 1234 5678</p>
+              <p><i class="fas fa-envelope"></i> kontak@xyzcompany.com</p>
+              <a
+                href="https://wa.me/6287737656333?text=Halo%20XYZ%20Company"
+                target="_blank"
+                class="btn"
+                ><i class="fab fa-whatsapp"></i> Chat di WhatsApp</a
+              >
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.53673326167!2d106.80165983709848!3d-6.244917452336821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f16e16c5478d%3A0x696b91bf66bce6f2!2sBlok%20M%20Square!5e0!3m2!1sid!2sid!4v1667891234567!5m2!1sid!2sid"
+                  width="100%"
+                  height="300"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="compare-bar" class="compare-bar">
+      <div class="container compare-bar-inner">
+        <div id="compare-items" class="compare-items"></div>
+        <button id="compare-button" class="btn" disabled>
+          Bandingkan (Min. 2)
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 class="nav-logo">XYZ Company</h4>
+            <p>Menciptakan masa depan teknologi.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Tautan Cepat</h4>
+            <ul>
+              <li><a href="#products">Produk</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="dukungan.html">Dukungan</a></li>
+              <li><a href="#contact">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="syarat_ketentuan.html">Syarat & Ketentuan</a></li>
+              <li><a href="kebijakan_privasi.html">Kebijakan Privasi</a></li>
+              <li>
+                <a href="kebijakan_pengembalian.html">Kebijakan Pengembalian</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i></a
+              ><a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i></a
+              ><a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a
+              ><a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          Hak Cipta © <span id="copyright-year"></span> XYZ Company.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

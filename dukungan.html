@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dukungan Pelanggan | XYZ Company</title>
+    <meta
+      name="description"
+      content="Pusat dukungan pelanggan XYZ Company. Temukan driver, daftarkan garansi, dan baca FAQ untuk produk Anda."
+    />
+    <meta name="author" content="XYZ Company" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="support-page">
+    <div id="preloader"><div class="spinner"></div></div>
+
+    <header class="header">
+      <nav class="container navbar">
+        <a href="index.html" class="nav-logo">XYZ Company</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link-item active">Beranda</a></li>
+
+          <li class="nav-item-dropdown simple-dropdown">
+            <a href="index.html#products" class="nav-link-item"
+              >Produk <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html#products" data-category-filter="work"
+                  >Untuk Bekerja</a
+                >
+              </li>
+              <li>
+                <a href="index.html#products" data-category-filter="gaming"
+                  >Gaming</a
+                >
+              </li>
+              <li>
+                <a href="index.html#products" data-category-filter="creative"
+                  >Kreatif</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a href="index.html#products" data-category-filter="all"
+                  >Lihat Semua Produk</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html#blog" class="nav-link-item">Blog</a></li>
+          <li><a href="dukungan.html" class="nav-link-item">Dukungan</a></li>
+          <li><a href="index.html#contact" class="nav-link-item">Kontak</a></li>
+        </ul>
+        <div class="nav-controls">
+          <a
+            href="keranjang.html"
+            class="nav-cart-icon"
+            aria-label="Keranjang Belanja"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-item-count">0</span>
+          </a>
+          <div id="user-control-area">
+            <a
+              href="login.html"
+              class="nav-user-icon"
+              aria-label="Akun Pengguna"
+            >
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round">
+                <i class="fas fa-sun sun-icon"></i
+                ><i class="fas fa-moon moon-icon"></i>
+              </div>
+            </label>
+          </div>
+          <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="support-hero">
+        <div class="container">
+          <h1>Halo, Ada yang Bisa Kami Bantu?</h1>
+          <div class="support-search-bar">
+            <input
+              type="text"
+              id="faq-search-input"
+              placeholder="Ketik masalah Anda di sini (contoh: garansi)"
+            />
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </section>
+
+      <section id="support-services" class="section">
+        <div class="container">
+          <h2 class="section-title">Layanan Utama</h2>
+          <div class="support-grid">
+            <a href="registrasi-garansi.html" class="support-card">
+              <div class="support-icon">
+                <i class="fas fa-file-signature"></i>
+              </div>
+              <h3>Registrasi Garansi</h3>
+              <p>
+                Daftarkan produk Anda untuk mengaktifkan garansi resmi dan
+                mendapatkan dukungan penuh.
+              </p>
+            </a>
+            <a href="download-driver.html" class="support-card">
+              <div class="support-icon"><i class="fas fa-download"></i></div>
+              <h3>Download Driver & Manual</h3>
+              <p>
+                Dapatkan driver, software, dan buku panduan terbaru untuk produk
+                XYZ Company Anda.
+              </p>
+            </a>
+            <a href="index.html#contact" class="support-card">
+              <div class="support-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <h3>Pusat Servis</h3>
+              <p>
+                Temukan lokasi pusat servis terdekat dan informasi kontak untuk
+                perbaikan produk Anda.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section bg-light">
+        <div class="container">
+          <h2 class="section-title">Pertanyaan Umum (FAQ)</h2>
+          <div class="faq-accordion" id="faq-accordion"></div>
+          <p id="faq-no-results" class="faq-no-results" style="display: none">
+            Maaf, tidak ada pertanyaan yang cocok dengan pencarian Anda.
+          </p>
+        </div>
+      </section>
+
+      <section id="still-need-help" class="still-need-help-section">
+        <div class="container">
+          <h2>Masih Butuh Bantuan?</h2>
+          <p>Tim kami siap membantu Anda secara langsung.</p>
+          <div class="help-options">
+            <a
+              href="https://wa.me/6287737656333?text=Halo%20tim%20dukungan%20XYZ%20Company,%20saya%20butuh%20bantuan."
+              target="_blank"
+              class="btn"
+              ><i class="fab fa-whatsapp"></i> Hubungi via WhatsApp</a
+            >
+            <a href="index.html#contact" class="btn btn-secondary"
+              >Lihat Halaman Kontak</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 class="nav-logo">XYZ Company</h4>
+            <p>
+              Menciptakan masa depan teknologi dengan perangkat canggih dan
+              elegan untuk semua orang.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Tautan Cepat</h4>
+            <ul>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="index.html#blog">Blog</a></li>
+              <li><a href="dukungan.html">Dukungan</a></li>
+              <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Syarat & Ketentuan</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Kebijakan Pengembalian</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          Hak Cipta &copy; <span id="copyright-year"></span> XYZ Company. Hak
+          Cipta Dilindungi.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
